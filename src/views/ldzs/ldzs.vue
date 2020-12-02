@@ -54,6 +54,7 @@ export default {
 	},
 	computed: {},
 	mounted() {
+		console.log("git")
 	},
 	methods:{
 		toUtil(){
