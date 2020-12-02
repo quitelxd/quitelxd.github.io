@@ -1,0 +1,196 @@
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clear-fix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.maxHeight {
+  height: 100%;
+}
+
+.page-box {
+  margin-top: 10px;
+}
+
+.gradient {
+  width: 100%;
+  padding: 5px;
+  background: linear-gradient(to right, rgb(63, 111, 255), rgba(32, 80, 255, 0.5) 50%, rgba(32, 80, 255, -0.5));
+}
+
+.table {
+  width: 100%;
+  border: 1px solid rgb(2, 72, 164);
+  text-align: center;
+  border-collapse: collapse;
+  text-align: left;
+
+  tr {
+    border: 1px solid rgb(2, 72, 164);
+
+    th, td {
+      padding: 5px 10px;
+      border: 1px solid rgb(2, 72, 164);
+
+      &:nth-child(odd) {
+        background: rgba(2, 72, 164, 0.42);
+      }
+    }
+
+  }
+}
+
+//地图上的自定义标签样式
+.carBlock {
+  background: rgba(255,255,255,.6);
+  background-repeat: no-repeat;
+  background-size: 4px 13px, 13px 4px;
+  color: #000;
+  border: 1px solid red;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 16px;
+  position: relative;
+  .title {
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+    width: 150px;
+    &:hover {
+      text-decoration: underline;
+      color: red;
+    }
+  }
+}
+/*
+.carBlock>div{
+
+  width: 11px;
+
+  height: 11px;
+
+  position:absolute;
+
+}*/
+
+.carBlock .lt{
+position: absolute;
+  border-top: 3px solid red;
+
+  border-left: 3px solid red;
+
+  left: -2px;
+
+  top: -2px;
+
+}
+
+.carBlock .rt{
+
+  position: absolute;
+  border-top: 3px solid red;
+
+  border-right: 3px solid red;
+
+  right: -2px;
+
+  top: -2px;
+
+}
+
+.carBlock .rb{
+
+  position: absolute;
+  border-bottom:3px solid red;
+
+  border-right: 3px solid red;
+
+  right: -2px;
+
+  bottom: -2px;
+
+}
+
+.carBlock .lb{
+
+  position: absolute;
+  border-bottom:3px solid red;
+
+  border-left: 3px solid red;
+
+  left: -2px;
+
+  bottom: -2px;
+
+}
+//同上
+.zdBlock {
+  background: rgb(57, 126, 242);
+  padding: 5px 8px;
+  border-radius: 3px;
+  position: relative;
+  &.task{
+    width: 200px;
+    word-break: break-all;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top: 10px solid rgb(57, 126, 242);
+  }
+
+  &:hover {
+    background: rgb(0, 153, 255);
+
+    &:after {
+      border: 10px solid transparent;
+      border-top: 10px solid rgb(0, 153, 255);
+    }
+  }
+}
+#overlay{
+  background: rgb(0, 153, 255);
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+.w-e-toolbar, .w-e-text-container, .w-e-menu-panel {
+  background-color: transparent !important;
+  border: 1px solid #1678ed !important;
+}
+
+.nulldata {
+  color: #c2c4d7;
+  text-align: center;
+}
+.smallText{
+  font-size: 14px;
+}

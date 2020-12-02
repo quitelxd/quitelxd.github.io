@@ -1,32 +1,34 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <video class="bgVideo" autoplay loop muted>
+      <source src="./assets/img/mainBg.mp4" type="video/mp4"/>
+    </video>
   </div>
 </template>
+<style scoped lang="less">
+  #app {
+    height: 100%;
+    .bgVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      height: auto;
+      width: auto;
+      /*加滤镜*/
+      /*filter: blur(5px); //背景模糊设置*/
+      /*-webkit-filter: grayscale(100%);*/
+      /*filter:grayscale(10%); //背景灰度设置*/
+      z-index: -11;
+      source {
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: auto;
+      }
+    }
+  }
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
