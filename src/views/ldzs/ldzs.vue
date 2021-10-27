@@ -58,7 +58,8 @@ export default {
 	},
 	methods:{
 		toUtil(){
-			this.$router.push("/util")
+            window.location.href = "https://quitelxd.github.io/vue3-ts";
+			// this.$router.push("/util")
 		}
 	}
 };
