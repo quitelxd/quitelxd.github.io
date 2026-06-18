@@ -5,6 +5,14 @@ Vue.use(VueRouter)
 
 const routes = [
     {
+        path: '/aboutUs',
+        component: () => import( '../views/Home'),
+        children: [{
+            path: '',
+            component: () => import( '../views/aboutUs'),
+        }]
+    },
+    {
         path: '/',
         component: () => import( '../views/Home'),
         redirect: '/home/ldzs',
@@ -35,6 +43,7 @@ const router = new VueRouter({
 })
 
 const originalPush = VueRouter.prototype.push
+// 统一处理重复跳转导致的路由报错。
 VueRouter.prototype.push = function push(location) {
     return originalPush.call(this, location).catch(err => err)
 }
