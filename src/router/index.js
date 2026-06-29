@@ -13,6 +13,14 @@ const routes = [
         }]
     },
     {
+        path: '/privacyPolicy',
+        component: () => import( '../views/Home'),
+        children: [{
+            path: '',
+            component: () => import( '../views/privacyPolicy'),
+        }]
+    },
+    {
         path: '/',
         component: () => import( '../views/Home'),
         redirect: '/home/ldzs',
